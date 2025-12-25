@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Sazzad Hossain | AI Specialist & Full-Stack Developer</title>
+    <meta name="description" content="Professional AI Specialist & Full-Stack Web Developer offering cutting-edge AI solutions, automation, and web development services.">
+    <meta name="keywords" content="AI Specialist, Web Developer, Automation Expert, Bangladesh, ChatGPT, DeepSeek, Full-Stack Developer">
+    <meta name="author" content="Md. Sazzad Hossain">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="#">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="ai-loader">
+                <div class="ai-dot"></div>
+                <div class="ai-dot"></div>
+                <div class="ai-dot"></div>
+            </div>
+            <p class="loading-text">Initializing AI System...</p>
+        </div>
+    </div>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="#" class="logo">
+                    <span class="logo-text">SH</span>
+                    <span class="logo-ai">AI</span>
+                </a>
+
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item"><a href="#home" class="nav-link active" data-i18n="home">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link" data-i18n="about">About</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link" data-i18n="skills">Skills</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link" data-i18n="services">Services</a></li>
+                    <li class="nav-item"><a href="#portfolio" class="nav-link" data-i18n="portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a href="#blog" class="nav-link" data-i18n="blog">Blog</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link" data-i18n="contact">Contact</a></li>
+                    
+                    <!-- More Menu (Dropdown) -->
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link more-btn" data-i18n="more">More <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#ai-features" data-i18n="ai_features">AI Features</a>
+                            <a href="#ai-fun-zone" data-i18n="ai_fun_zone">AI Fun Zone</a>
+                            <a href="#mini-games" data-i18n="mini_games">Mini Games</a>
+                            <a href="#testimonials" data-i18n="testimonials">Testimonials</a>
+                            <a href="#achievements" data-i18n="achievements">Achievements</a>
+                            <a href="#faq" data-i18n="faq">FAQ</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="settings-toggle" data-i18n="settings">Settings</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="nav-controls">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="lang-toggle" id="lang-toggle" data-lang="en" aria-label="Toggle language">
+                        <span>EN</span>/<span>BN</span>
+                    </button>
+                    <button class="hamburger" id="hamburger" aria-label="Menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Settings Panel -->
+    <div id="settings-panel" class="settings-panel">
+        <h3 data-i18n="settings">Settings</h3>
+        <div class="setting-item">
+            <label data-i18n="language">Language</label>
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="bn">বাংলা</option>
+            </select>
+        </div>
+        <div class="setting-item">
+            <label data-i18n="theme">Theme</label>
+            <select id="theme-select">
+                <option value="auto" data-i18n="auto">Auto</option>
+                <option value="light" data-i18n="light">Light</option>
+                <option value="dark" data-i18n="dark">Dark</option>
+            </select>
+        </div>
+        <div class="setting-item">
+            <label data-i18n="music">Background Music</label>
+            <label class="switch">
+                <input type="checkbox" id="music-toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="setting-item">
+            <label data-i18n="animations">Animations</label>
+            <label class="switch">
+                <input type="checkbox" id="animations-toggle" checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="setting-item">
+            <label data-i18n="font_size">Font Size</label>
+            <input type="range" id="font-size" min="12" max="24" value="16">
+        </div>
+        <button class="close-settings" data-i18n="close">Close</button>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home/Hero Section -->
+        <section id="home" class="section hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-image-container">
+                        <div class="hero-image">
+                            <img src="3863-Picsart-AiImageEnhancer.jpg" 
+                                 alt="Md. Sazzad Hossain" class="developer-img">
+                            <div class="image-glow"></div>
+                        </div>
+                    </div>
+                    
+                    <h1 class="hero-title">Md. Sazzad Hossain</h1>
+                    
+                    <div class="typing-container">
+                        <span class="typing-text" id="typing-text"></span>
+                        <span class="cursor">|</span>
+                    </div>
+                    
+                    <div class="hero-bio">
+                        <p class="bio-english" data-i18n="bio_english">AI Specialist & Full-Stack Developer specializing in automation, chatbot systems, and cutting-edge web solutions. Transforming businesses with intelligent technology.</p>
+                        <p class="bio-bangla" data-i18n="bio_bangla">এআই বিশেষজ্ঞ ও ফুল-স্ট্যাক ডেভেলপার, অটোমেশন, চ্যাটবোট সিস্টেম এবং আধুনিক ওয়েব সমাধানে বিশেষজ্ঞ। বুদ্ধিমান প্রযুক্তি দিয়ে ব্যবসায় রূপান্তর।</p>
+                    </div>
+                    
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" data-i18n="contact_me">Contact Me</button>
+                        <button class="btn btn-secondary" data-i18n="view_services">View Services</button>
+                        <button class="btn btn-outline" data-i18n="explore_ai">Explore AI Features</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mouse Scroll Indicator -->
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="about_me">About Me</h2>
+                
+                <div class="about-grid">
+                    <div class="about-card glass">
+                        <h3 data-i18n="personal_info">Personal Information</h3>
+                        <div class="info-list">
+                            <div class="info-item">
+                                <strong data-i18n="full_name">Full Name:</strong>
+                                <span>Md. Sazzad Hossain</span>
+                            </div>
+                            <div class="info-item">
+                                <strong data-i18n="village">Village:</strong>
+                                <span>Kutumbapur</span>
+                            </div>
+                            <div class="info-item">
+                                <strong data-i18n="thana">Thana:</strong>
+                                <span>Chandina</span>
+                            </div>
+                            <div class="info-item">
+                                <strong data-i18n="district">District:</strong>
+                                <span>Cumilla</span>
+                            </div>
+                            <div class="info-item">
+                                <strong data-i18n="country">Country:</strong>
+                                <span>Bangladesh</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-card glass">
+                        <h3 data-i18n="education">Education</h3>
+                        <div class="info-list">
+                            <div class="info-item">
+                                <strong data-i18n="school">School:</strong>
+                                <span>Abeda-Noor High School</span>
+                            </div>
+                            <div class="info-item">
+                                <strong>SSC Year:</strong>
+                                <span>2024</span>
+                            </div>
+                            <div class="info-item">
+                                <strong data-i18n="college">College:</strong>
+                                <span>Chandina Redwan Ahmed College</span>
+                            </div>
+                            <div class="info-item">
+                                <strong data-i18n="group">Group:</strong>
+                                <span>Science</span>
+                            </div>
+                            <div class="info-item">
+                                <strong>HSC Year:</strong>
+                                <span>2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bio-card glass">
+                    <h3 data-i18n="professional_bio">Professional Bio</h3>
+                    <p data-i18n="bio_full">As an AI Specialist and Full-Stack Web Developer, I specialize in creating intelligent automation systems, AI-powered chatbots, and responsive web applications. With expertise in both frontend and backend technologies, I build scalable solutions that help businesses streamline operations and enhance user engagement. My focus is on implementing cutting-edge AI technologies to solve real-world problems and create impactful digital experiences.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="my_skills">My Skills</h2>
+                
+                <div class="skills-grid">
+                    <!-- Skills will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section services-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="services_title">Services</h2>
+                
+                <div class="services-grid">
+                    <!-- Services will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Features Section -->
+        <section id="ai-features" class="section ai-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="ai_features_title">AI Models Playground</h2>
+                <p class="section-subtitle" data-i18n="ai_features_sub">Explore the world's leading AI models and their capabilities</p>
+                
+                <div class="ai-models-grid">
+                    <!-- AI Models will be populated by JavaScript -->
+                </div>
+                
+                <!-- AI Chat Assistant Demo -->
+                <div class="ai-chat-demo glass">
+                    <h3 data-i18n="ai_chat_demo">AI Chat Assistant Demo</h3>
+                    <div class="chat-container">
+                        <div class="chat-modes">
+                            <button class="chat-mode-btn active" data-mode="coding" data-i18n="coding_mode">Coding Mode</button>
+                            <button class="chat-mode-btn" data-mode="study" data-i18n="study_mode">Study Mode</button>
+                            <button class="chat-mode-btn" data-mode="writing" data-i18n="writing_mode">Writing Mode</button>
+                            <button class="chat-mode-btn" data-mode="automation" data-i18n="automation_mode">Automation Mode</button>
+                            <button class="chat-mode-btn" data-mode="fun" data-i18n="fun_mode">Fun Mode</button>
+                        </div>
+                        
+                        <div class="chat-personality">
+                            <select id="personality-select" data-i18n="select_personality">
+                                <option value="professional" data-i18n="professional">Professional</option>
+                                <option value="friendly" data-i18n="friendly">Friendly</option>
+                                <option value="teacher" data-i18n="teacher">Teacher</option>
+                                <option value="hacker" data-i18n="hacker">Hacker</option>
+                            </select>
+                        </div>
+                        
+                        <div class="chat-history" id="chat-history">
+                            <div class="message ai-message">
+                                <div class="message-content">
+                                    <strong>AI Assistant:</strong> Hello! I'm your AI assistant. How can I help you today?
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="chat-input-area">
+                            <input type="text" id="chat-input" placeholder="Type your message..." data-i18n="chat_placeholder">
+                            <button id="send-chat" data-i18n="send">Send</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- AI Code Assistant -->
+                <div class="ai-code-demo glass">
+                    <h3 data-i18n="code_assistant">AI Code Assistant</h3>
+                    <div class="code-container">
+                        <div class="code-language">
+                            <select id="code-language">
+                                <option value="html">HTML</option>
+                                <option value="css">CSS</option>
+                                <option value="javascript">JavaScript</option>
+                                <option value="python">Python</option>
+                            </select>
+                        </div>
+                        
+                        <textarea id="code-input" placeholder="Paste your code here..." data-i18n="code_placeholder"></textarea>
+                        
+                        <div class="code-buttons">
+                            <button class="code-btn" data-action="explain" data-i18n="explain_code">Explain Code</button>
+                            <button class="code-btn" data-action="optimize" data-i18n="optimize_code">Optimize Code</button>
+                            <button class="code-btn" data-action="fix" data-i18n="fix_errors">Fix Errors</button>
+                        </div>
+                        
+                        <div class="code-output" id="code-output"></div>
+                    </div>
+                </div>
+                
+                <!-- Prompt Engineering Lab -->
+                <div class="prompt-lab glass">
+                    <h3 data-i18n="prompt_lab">Prompt Engineering Lab</h3>
+                    <div class="prompt-templates">
+                        <button class="prompt-template" data-template="website" data-i18n="website_generator">Website Generator</button>
+                        <button class="prompt-template" data-template="business" data-i18n="business_idea">Business Idea Generator</button>
+                        <button class="prompt-template" data-template="study" data-i18n="study_helper">Study Helper</button>
+                        <button class="prompt-template" data-template="resume" data-i18n="resume_builder">Resume Builder</button>
+                    </div>
+                    
+                    <div class="prompt-controls">
+                        <div class="control-group">
+                            <label data-i18n="tone">Tone:</label>
+                            <select id="tone-select">
+                                <option value="professional" data-i18n="professional">Professional</option>
+                                <option value="casual" data-i18n="casual">Casual</option>
+                                <option value="friendly" data-i18n="friendly">Friendly</option>
+                                <option value="academic" data-i18n="academic">Academic</option>
+                            </select>
+                        </div>
+                        
+                        <div class="control-group">
+                            <label data-i18n="length">Length:</label>
+                            <select id="length-select">
+                                <option value="short" data-i18n="short">Short</option>
+                                <option value="medium" data-i18n="medium">Medium</option>
+                                <option value="long" data-i18n="long">Long</option>
+                            </select>
+                        </div>
+                        
+                        <div class="control-group">
+                            <label data-i18n="language">Language:</label>
+                            <select id="prompt-lang-select">
+                                <option value="en">English</option>
+                                <option value="bn">বাংলা</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="generated-prompt">
+                        <textarea id="prompt-output" readonly></textarea>
+                        <button class="copy-btn" data-copy="prompt-output" data-i18n="copy_prompt">Copy Prompt</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Fun Zone -->
+        <section id="ai-fun-zone" class="section fun-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="ai_fun_zone">AI Fun Zone</h2>
+                
+                <div class="fun-grid">
+                    <div class="fun-card glass">
+                        <h3 data-i18n="joke_generator">AI Joke Generator</h3>
+                        <div class="joke-display" id="joke-display">
+                            <p data-i18n="joke_placeholder">Click the button for a joke!</p>
+                        </div>
+                        <button class="fun-btn" id="generate-joke" data-i18n="get_joke">Get AI Joke</button>
+                    </div>
+                    
+                    <div class="fun-card glass">
+                        <h3 data-i18n="fun_facts">Random Tech Fun Facts</h3>
+                        <div class="fact-display" id="fact-display">
+                            <p data-i18n="fact_placeholder">Discover interesting tech facts!</p>
+                        </div>
+                        <button class="fun-btn" id="generate-fact" data-i18n="get_fact">Get New Fact</button>
+                    </div>
+                    
+                    <div class="fun-card glass">
+                        <h3 data-i18n="quote_generator">AI Quote Generator</h3>
+                        <div class="quote-display" id="quote-display">
+                            <p data-i18n="quote_placeholder">Get inspired with AI-generated quotes!</p>
+                        </div>
+                        <button class="fun-btn" id="generate-quote" data-i18n="get_quote">Generate Quote</button>
+                    </div>
+                    
+                    <div class="fun-card glass">
+                        <h3 data-i18n="mood_selector">Mood Selector</h3>
+                        <div class="mood-buttons">
+                            <button class="mood-btn" data-mood="happy">😊</button>
+                            <button class="mood-btn" data-mood="neutral">😐</button>
+                            <button class="mood-btn" data-mood="sad">😞</button>
+                        </div>
+                        <div class="mood-response" id="mood-response">
+                            <p data-i18n="mood_placeholder">Select your mood above</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mini Games -->
+        <section id="mini-games" class="section games-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="mini_games">Mini Games</h2>
+                
+                <div class="games-tabs">
+                    <button class="game-tab active" data-game="guess">Guess the Number</button>
+                    <button class="game-tab" data-game="tictactoe">Tic Tac Toe</button>
+                    <button class="game-tab" data-game="reaction">Reaction Test</button>
+                </div>
+                
+                <div class="game-container">
+                    <!-- Guess the Number Game -->
+                    <div id="guess-game" class="game-content active">
+                        <h3>Guess the Number (1-100)</h3>
+                        <div class="game-info">
+                            <p data-i18n="guess_instructions">I'm thinking of a number between 1 and 100. Try to guess it!</p>
+                            <p>Guesses left: <span id="guesses-left">10</span></p>
+                        </div>
+                        <input type="number" id="guess-input" min="1" max="100">
+                        <button id="guess-submit" data-i18n="submit_guess">Submit Guess</button>
+                        <div class="game-feedback" id="guess-feedback"></div>
+                        <div class="game-history" id="guess-history"></div>
+                        <button id="guess-reset" data-i18n="reset_game">Reset Game</button>
+                    </div>
+                    
+                    <!-- Tic Tac Toe Game -->
+                    <div id="tictactoe-game" class="game-content">
+                        <h3>Tic Tac Toe</h3>
+                        <div class="game-status" id="ttt-status">Player X's Turn</div>
+                        <div class="ttt-board" id="ttt-board">
+                            <!-- Board will be generated by JS -->
+                        </div>
+                        <button id="ttt-reset" data-i18n="reset_game">Reset Game</button>
+                    </div>
+                    
+                    <!-- Reaction Test Game -->
+                    <div id="reaction-game" class="game-content">
+                        <h3>Reaction Speed Test</h3>
+                        <div class="reaction-instructions">
+                            <p data-i18n="reaction_instructions">Click the button as soon as it turns green. Wait for the red light first!</p>
+                        </div>
+                        <div class="reaction-light" id="reaction-light"></div>
+                        <button id="reaction-btn" data-i18n="click_when_green">Wait for Green...</button>
+                        <div class="reaction-results">
+                            <p>Reaction Time: <span id="reaction-time">0</span> ms</p>
+                            <p data-i18n="best_time">Best Time: <span id="best-time">0</span> ms</p>
+                        </div>
+                        <button id="reaction-start" data-i18n="start_test">Start Test</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section portfolio-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="portfolio">Portfolio</h2>
+                
+                <div class="portfolio-grid">
+                    <!-- Portfolio items will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="section blog-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="knowledge_blog">Knowledge & Blog</h2>
+                
+                <div class="blog-grid">
+                    <article class="blog-card glass">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="AI Automation">
+                        </div>
+                        <div class="blog-content">
+                            <h3 data-i18n="blog_title_1">How AI Can Automate Your Business</h3>
+                            <p data-i18n="blog_excerpt_1">Discover practical ways to implement AI automation in your business to save time and increase efficiency. From chatbots to process automation, learn how AI can transform your operations.</p>
+                            <a href="#" class="blog-link" data-i18n="read_more">Read More →</a>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-card glass">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Web Development">
+                        </div>
+                        <div class="blog-content">
+                            <h3 data-i18n="blog_title_2">Complete Website Development Guide 2024</h3>
+                            <p data-i18n="blog_excerpt_2">A comprehensive guide to modern web development covering everything from planning and design to deployment and maintenance. Learn best practices for creating successful websites.</p>
+                            <a href="#" class="blog-link" data-i18n="read_more">Read More →</a>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-card glass">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="AI Tools">
+                        </div>
+                        <div class="blog-content">
+                            <h3 data-i18n="blog_title_3">Top AI Tools for Beginners in 2024</h3>
+                            <p data-i18n="blog_excerpt_3">Explore the most accessible and powerful AI tools for beginners. Whether you're a content creator, developer, or business owner, these tools can help you leverage AI technology.</p>
+                            <a href="#" class="blog-link" data-i18n="read_more">Read More →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="contact_me">Contact Me</h2>
+                
+                <div class="contact-grid">
+                    <div class="contact-info glass">
+                        <h3 data-i18n="get_in_touch">Get In Touch</h3>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <strong data-i18n="phone">Phone:</strong>
+                                    <span>+8801916475989</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <strong data-i18n="email">Email:</strong>
+                                    <span>87sazzadhossain87@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-whatsapp"></i>
+                                <div>
+                                    <strong>WhatsApp:</strong>
+                                    <a href="https://wa.me/8801916475989" target="_blank" data-i18n="whatsapp_message">Send Message</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Facebook">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Messenger">
+                                <i class="fab fa-facebook-messenger"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form glass">
+                        <h3 data-i18n="send_message">Send Message</h3>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="contact-name" placeholder="Your Name" required data-i18n="name_placeholder">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="contact-email" placeholder="Your Email" required data-i18n="email_placeholder">
+                            </div>
+                            <div class="form-group">
+                                <textarea id="contact-message" rows="5" placeholder="Your Message" required data-i18n="message_placeholder"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" data-i18n="send_message">Send Message</button>
+                        </form>
+                        <div id="form-message"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#" class="logo">
+                        <span class="logo-text">SH</span>
+                        <span class="logo-ai">AI</span>
+                    </a>
+                    <p class="footer-tagline" data-i18n="footer_tagline">Building the future with AI & Web Technology</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 data-i18n="quick_links">Quick Links</h4>
+                        <ul>
+                            <li><a href="#home" data-i18n="home">Home</a></li>
+                            <li><a href="#about" data-i18n="about">About</a></li>
+                            <li><a href="#services" data-i18n="services">Services</a></li>
+                            <li><a href="#portfolio" data-i18n="portfolio">Portfolio</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 data-i18n="ai_features">AI Features</h4>
+                        <ul>
+                            <li><a href="#ai-features" data-i18n="ai_models">AI Models</a></li>
+                            <li><a href="#ai-fun-zone" data-i18n="ai_fun_zone">AI Fun Zone</a></li>
+                            <li><a href="#mini-games" data-i18n="mini_games">Mini Games</a></li>
+                            <li><a href="#blog" data-i18n="knowledge_blog">Knowledge Blog</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 data-i18n="connect">Connect</h4>
+                        <div class="footer-social">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://wa.me/8801916475989" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-controls">
+                    <button class="theme-toggle small" id="footer-theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="lang-toggle small" id="footer-lang-toggle" data-lang="en" aria-label="Toggle language">
+                        <span>EN</span>/<span>BN</span>
+                    </button>
+                </div>
+                
+                <div class="visitor-counter">
+                    <i class="fas fa-eye"></i>
+                    <span data-i18n="visitors">Visitors:</span>
+                    <span id="visitor-count">0</span>
+                </div>
+                
+                <p class="copyright">
+                    &copy; <span id="current-year">2024</span> Md. Sazzad Hossain – <span data-i18n="all_rights_reserved">All Rights Reserved</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Audio Element for Background Music -->
+    <audio id="bg-music" loop>
+        <source src="https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
